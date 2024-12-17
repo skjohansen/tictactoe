@@ -9,11 +9,18 @@ namespace tictactoe.Application.Test.Mocks
 {
     public class ConsoleWrapperMock : IConsole
     {
+        public StringBuilder screenContent = new StringBuilder();
         public string LineToWrite { get; set; }
+
+        public void ClearScreen()
+        {
+            screenContent.Clear();
+        }
 
         public void WriteLine(string message)
         {
             LineToWrite = message;
+            screenContent.AppendLine(message);
         }
     }
 }

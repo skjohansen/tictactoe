@@ -9,5 +9,8 @@ namespace tictactoe.Application.Console
     public interface IConsole
     {
         void WriteLine(string message);
+
+        void ClearScreen();
     }
+
 }

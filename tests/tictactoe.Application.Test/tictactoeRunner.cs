@@ -11,7 +11,7 @@ namespace tictactoe.Application.Test;
 public class GameRunnerTests
 {
     [Fact]
-    public void Run_WelcomeMessageIsPresented()
+    public Task Run_BoardIsPresented()
     {
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
@@ -19,6 +19,7 @@ public class GameRunnerTests
         // Act
         sut.Run();
         // Assert
-        Assert.Equal("Welcome to the tictactoe!", ((ConsoleWrapperMock)consoleMock).LineToWrite);
+        string content= ((ConsoleWrapperMock)consoleMock).screenContent.ToString();
+        return Verifier.Verify(content);
     }
 }

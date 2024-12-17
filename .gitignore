@@ -4,3 +4,4 @@
 *.coverage
 **/TestResults
 coveragereport/
+*.received.txt
