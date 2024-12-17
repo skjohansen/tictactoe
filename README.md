@@ -2,7 +2,7 @@
 
 # tictactoe
 
-Url for tictactoe:
+Assignment given in slack
 
 ## Important documents
 * Getting started on this [Cookie cutter](cookie.md)
