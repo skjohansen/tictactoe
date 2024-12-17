@@ -15,7 +15,9 @@ public class GameRunnerTests
     {
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
-        var sut = new tictactoeRunner(consoleMock);
+        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "C"};
+        
+        var sut = new tictactoeRunner(consoleMock, playerMock);
         // Act
         sut.Run();
         // Assert
@@ -23,14 +25,15 @@ public class GameRunnerTests
         return Verifier.Verify(content);
     }
 
-    [Fact(DisplayName = "Present starter")]
+    [Fact(DisplayName = "Present starting player")]
     public void Run_StarterIsPresented()
     {
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
-        var sut = new tictactoeRunner(consoleMock);
+        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "C"};
+        var sut = new tictactoeRunner(consoleMock, playerMock);
         // Act
-        var outout = sut.PresentStarter("");
+        var outout = sut.PresentStarter("X");
         // Assert
         Assert.Equal("The game will start with player X", outout);
         
