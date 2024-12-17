@@ -20,6 +20,19 @@ public class GameRunnerTests
         sut.Run();
         // Assert
         string content= ((ConsoleWrapperMock)consoleMock).screenContent.ToString();
-        return Verify(content);
+        return Verifier.Verify(content);
+    }
+
+    [Fact(DisplayName = "Present starter")]
+    public void Run_StarterIsPresented()
+    {
+        // Arrange
+        IConsole consoleMock = new ConsoleWrapperMock();
+        var sut = new tictactoeRunner(consoleMock);
+        // Act
+        var outout = sut.PresentStarter("");
+        // Assert
+        Assert.Equal("The game will start with player X", outout);
+        
     }
 }

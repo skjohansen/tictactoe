@@ -1,9 +1,11 @@
 # Notes - Plan of kata and Pomodoro flow
 
 * ⚠️ **WIP**  
-* print board
+* random winner
 * ✅ **GREEN**  
+* print board
 * 🧠 **In Discovery**  
+* tolling output
 * ❌ **RED**  
 * 📝 **TBD**  
 
