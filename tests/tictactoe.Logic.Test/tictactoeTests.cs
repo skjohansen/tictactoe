@@ -9,7 +9,7 @@ namespace tictactoe.Logic.Test;
 
 public class tictactoeTests(ITestOutputHelper output)
 {
-    [Fact]
+    [Fact(Skip = "Not implemented")]
     public void MethodName_StateUnderTest_ExpectedBehavior1()
     {
         output.WriteLine("Test steps");
@@ -20,7 +20,7 @@ public class tictactoeTests(ITestOutputHelper output)
         // Assert
     }
 
-    [Fact(DisplayName = "Pretty name")]
+    [Fact(Skip = "Not implemented")]
     public void MethodName_StateUnderTest_ExpectedBehavior2()
     {
         // Arrange

@@ -15,7 +15,7 @@ public class GameRunnerTests
     {
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
-        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "C"};
+        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "X"};
         
         var sut = new tictactoeRunner(consoleMock, playerMock);
         // Act
@@ -30,7 +30,7 @@ public class GameRunnerTests
     {
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
-        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "C"};
+        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "X"};
         var sut = new tictactoeRunner(consoleMock, playerMock);
         // Act
         var outout = sut.PresentStarter("X");
