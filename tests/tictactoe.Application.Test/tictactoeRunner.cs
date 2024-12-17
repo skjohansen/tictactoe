@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using tictactoe.Application.Console;
 using tictactoe.Application.Test.Mocks;
+using tictactoe.Logic;
 
 namespace tictactoe.Application.Test;
 
@@ -16,8 +17,8 @@ public class GameRunnerTests
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
         IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "X"};
-        
-        var sut = new tictactoeRunner(consoleMock, playerMock);
+        IGameEngine gameEngine = new GameEngine();
+        var sut = new tictactoeRunner(consoleMock, playerMock, gameEngine);
         // Act
         sut.Run();
         // Assert
@@ -31,7 +32,8 @@ public class GameRunnerTests
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
         IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "X"};
-        var sut = new tictactoeRunner(consoleMock, playerMock);
+        IGameEngine gameEngine = new GameEngine();
+        var sut = new tictactoeRunner(consoleMock, playerMock, gameEngine);
         // Act
         var outout = sut.PresentStarter("X");
         // Assert
@@ -46,10 +48,24 @@ public class GameRunnerTests
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
         IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "X"};
-        
-        var sut = new tictactoeRunner(consoleMock, playerMock);
+        IGameEngine gameEngine = new GameEngine();
+        gameEngine.CurrentPlayer = "X";
+        // tech debt: not good tests implementation
+        gameEngine.SetPeice(0,0); //x
+        gameEngine.NextPlayer();
+        gameEngine.SetPeice(1,1); //o
+        gameEngine.NextPlayer();
+        gameEngine.SetPeice(1,0); //x
+        gameEngine.NextPlayer();
+        gameEngine.SetPeice(2,2); //o
+        gameEngine.NextPlayer();
+        gameEngine.SetPeice(2,0); //x
+        gameEngine.HasWinner();
+        var sut = new tictactoeRunner(consoleMock, playerMock, gameEngine);
+
         // Act
         sut.Run();
+        
         // Assert
         string content= ((ConsoleWrapperMock)consoleMock).screenContent.ToString();
         return Verifier.Verify(content);

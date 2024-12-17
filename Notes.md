@@ -1,15 +1,15 @@
 # Notes - Plan of kata and Pomodoro flow
 
 ## ⚠️ **WIP**  
-* each player make a move
-* if 3 equal on vertical set as winner (tolling)
-* annonuce winner
 * if 3 equal on vertical set as winner (non-tolling)
 
 
 ## ✅ **GREEN**  
 * print board (milestone 1)
 * random player (milestone 1)
+* each player make a move (milestone 2)
+* if 3 equal on vertical set as winner (tolling) (milestone 2)
+* annonuce winner (milestone 2)
 
 ## 🧠 **In Discovery**  
 *

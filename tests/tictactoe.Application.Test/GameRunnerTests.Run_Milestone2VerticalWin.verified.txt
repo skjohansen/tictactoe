@@ -1,7 +1,7 @@
 ﻿Player X:
-X| |
+X| | 
 -+-+-
-X|O|
+X|O| 
 -+-+-
 X| |O
 PLAYER X WON!
