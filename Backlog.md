@@ -17,11 +17,12 @@
 ## milestone 2: Vertical win
 part 1:
 * each player make a move
-* one move at the time with 2 sec pause between
-
-Part 2:
 * if 3 equal on vertical set as winner
 * annonuce winner
+
+Part 2:
+* bot players
+* one move at the time with 2 sec pause between
 
 ## milestone 5: Draw
 
