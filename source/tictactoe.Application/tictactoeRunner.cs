@@ -12,7 +12,15 @@ namespace tictactoe.Application
 
         public void Run()
         {
-            _console.WriteLine("Welcome to the tictactoe!");
+            _console.WriteLine("Game Board Creation…");
+            _console.WriteLine(" | |");
+            _console.WriteLine("-+-+-");
+            _console.WriteLine(" | |");
+            _console.WriteLine("-+-+-");
+            _console.WriteLine(" | |");
+            _console.WriteLine("");
+            _console.WriteLine("Board Created.");
+            _console.WriteLine("The game will start with player X");
         }
     }
 }

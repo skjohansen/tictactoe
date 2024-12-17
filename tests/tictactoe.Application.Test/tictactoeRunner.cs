@@ -10,7 +10,7 @@ namespace tictactoe.Application.Test;
 
 public class GameRunnerTests
 {
-    [Fact]
+    [Fact(DisplayName = "Milestone 1 - create board")]
     public Task Run_BoardIsPresented()
     {
         // Arrange
@@ -20,6 +20,6 @@ public class GameRunnerTests
         sut.Run();
         // Assert
         string content= ((ConsoleWrapperMock)consoleMock).screenContent.ToString();
-        return Verifier.Verify(content);
+        return Verify(content);
     }
 }
