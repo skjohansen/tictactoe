@@ -15,7 +15,7 @@ public class tictactoeTests(ITestOutputHelper output)
         output.WriteLine("Test steps");
 
         // Arrange
-        var sut = new tictactoe();
+        // var sut = new tictactoe();
         
         // Assert
     }
