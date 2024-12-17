@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Kata.Logic\Kata.Logic.csproj" />
+    <ProjectReference Include="..\tictactoe.Logic\tictactoe.Logic.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,2 +1,2 @@
-Remove-Item -Recurse -Force -Path tests\Kata.Application.Test\TestResults
-Remove-Item -Recurse -Force -Path tests\Kata.Logic.Test\TestResults
+Remove-Item -Recurse -Force -Path tests\tictactoe.Application.Test\TestResults
+Remove-Item -Recurse -Force -Path tests\tictactoe.Logic.Test\TestResults

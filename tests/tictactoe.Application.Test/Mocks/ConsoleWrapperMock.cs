@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kata.Application.Console;
+using tictactoe.Application.Console;
 
-namespace Kata.Application.Test.Mocks
+namespace tictactoe.Application.Test.Mocks
 {
     public class ConsoleWrapperMock : IConsole
     {

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kata.Application.Console;
-using Kata.Application.Test.Mocks;
+using tictactoe.Application.Console;
+using tictactoe.Application.Test.Mocks;
 
-namespace Kata.Application.Test;
+namespace tictactoe.Application.Test;
 
 public class GameRunnerTests
 {
@@ -15,10 +15,10 @@ public class GameRunnerTests
     {
         // Arrange
         IConsole consoleMock = new ConsoleWrapperMock();
-        var sut = new KataRunner(consoleMock);
+        var sut = new tictactoeRunner(consoleMock);
         // Act
         sut.Run();
         // Assert
-        Assert.Equal("Welcome to the Kata!", ((ConsoleWrapperMock)consoleMock).LineToWrite);
+        Assert.Equal("Welcome to the tictactoe!", ((ConsoleWrapperMock)consoleMock).LineToWrite);
     }
 }

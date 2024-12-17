@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\source\Kata.Application\Kata.Application.csproj" />
+    <ProjectReference Include="..\..\source\tictactoe.Application\tictactoe.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

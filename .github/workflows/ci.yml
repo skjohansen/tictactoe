@@ -1,4 +1,4 @@
-name: CI for Kata
+name: CI for tictactoe
 
 on:
   push:
@@ -58,5 +58,5 @@ jobs:
         context: .
         push: true 
         tags: |
-          ghcr.io/skjohansen/KATA:${{ github.run_number }} 
+          ghcr.io/skjohansen/tictactoe:${{ github.run_number }} 
 

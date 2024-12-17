@@ -1,4 +1,4 @@
-﻿namespace Kata.Application.Console
+namespace tictactoe.Application.Console
 {
     public class ConsoleWrapper : IConsole
     {
