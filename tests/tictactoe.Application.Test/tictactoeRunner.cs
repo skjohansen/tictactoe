@@ -38,4 +38,21 @@ public class GameRunnerTests
         Assert.Equal("The game will start with player X", outout);
         
     }
+
+
+    [Fact(DisplayName = "Milestone 2 - vertical win")]
+    public Task Run_Milestone2VerticalWin()
+    {
+        // Arrange
+        IConsole consoleMock = new ConsoleWrapperMock();
+        IPlayer playerMock = new PlayerMock(){ PlayerMockValue = "X"};
+        
+        var sut = new tictactoeRunner(consoleMock, playerMock);
+        // Act
+        sut.Run();
+        // Assert
+        string content= ((ConsoleWrapperMock)consoleMock).screenContent.ToString();
+        return Verifier.Verify(content);
+    }
+    
 }
