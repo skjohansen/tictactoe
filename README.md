@@ -1,4 +1,4 @@
-![Build](https://github.com/skjohansen/REPO/actions/workflows/ci.yml/badge.svg)
+![Build](https://github.com/skjohansen/tictactoe/actions/workflows/ci.yml/badge.svg)
 
 # tictactoe
 
